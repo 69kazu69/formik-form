@@ -4,30 +4,30 @@ import * as Yup from "yup"
 import TextField from './TextField';
 
 const SignUp = () => {
+    const validate = Yup.object({
+        Name : Yup.string()
+                            .max(14, "Too Long!")
+                            .required("Cannot be Empty!"),
+        Email : Yup.string()
+                            .email("Not a valid email!")
+                            .required("Cannot be Empty!"),
+        password : Yup.string()
+                            .min(6, "Too Short!")
+                            .required("Cannot be Empty!")
+    })
   return <div>
       <Formik
       
-        initialValues={
-            {
+        initialValues={{
                 Name : "",
                 Email : "",
                 password : ""
-            }
-        }
+            }}
 
-        validationSchema={
-                    Yup.object({
-                        tName : Yup.string()
-                                            .max(14, "Too Long!")
-                                            .required("Cannot be Empty!"),
-                        Email : Yup.string()
-                                            .email("Not a valid email!")
-                                            .required("Cannot be Empty!"),
-                        password : Yup.string()
-                                            .min(6, "Too Short!")
-                                            .required("Cannot be Empty!")
-                    })
-        }
+        validationSchema={ validate }
+
+        onSubmit={(values) =>
+        console.log(values)}
 
       >
           {formik => (
@@ -39,9 +39,11 @@ const SignUp = () => {
                   <TextField label= "Name" type = "text" name = "Name" />
                   <TextField label= "E-mail" type = "email" name = "Email" />
                   <TextField label= "Password" type = "password" name = "password" />
+                  <button type='submit'></button>
                   </Form>
               </div>
           )}
+
       </Formik>
   </div>;
 };
