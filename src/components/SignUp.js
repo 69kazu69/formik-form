@@ -2,6 +2,8 @@ import React from 'react';
 import { Formik, Form } from 'formik';
 import * as Yup from "yup"
 import TextField from './TextField';
+import "../App.css"
+
 
 const SignUp = () => {
     const validate = Yup.object({
@@ -15,7 +17,7 @@ const SignUp = () => {
                             .min(6, "Too Short!")
                             .required("Cannot be Empty!")
     })
-  return <div>
+  return <div className='form'>
       <Formik
       
         initialValues={{
@@ -32,7 +34,7 @@ const SignUp = () => {
       >
           {formik => (
               <div>
-                  <h1>
+                  <h1 className='header'>
                       Sign Up
                   </h1>
                   <Form>
