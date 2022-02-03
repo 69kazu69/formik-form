@@ -33,7 +33,7 @@ const SignUp = () => {
 
       >
           {formik => (
-              <div>
+              <div className='fc'>
                   <h1 className='header'>
                       Sign Up
                   </h1>
@@ -41,7 +41,7 @@ const SignUp = () => {
                   <TextField label= "Name" type = "text" name = "Name" />
                   <TextField label= "E-mail" type = "email" name = "Email" />
                   <TextField label= "Password" type = "password" name = "password" />
-                  <button type='submit'></button>
+                  <button type='submit'> Submit </button>
                   </Form>
               </div>
           )}
