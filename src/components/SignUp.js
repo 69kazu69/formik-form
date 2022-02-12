@@ -38,7 +38,7 @@ const SignUp = () => {
 
       >
           {formik => (
-              <Flex direction="column" align="center" justify="center" bg="gray.900" w="400px" h="50vh" boxShadow='dark-lg' p='6' rounded='xl'>
+              <Flex direction="column" align="center" justify="center" bg="gray.900" w="400px" h="50vh" boxShadow='dark-lg' p='6' >
                   <Heading fontSize = "4xl"  my="10" >
                       Sign Up
                   </Heading>
