@@ -9,7 +9,8 @@ const TextField = ({label, ...props}) => {
         <Input variant = "filled" {...field} {...props}
         placeholder = {label}
          className='input'
-         
+         color="white"
+         bg="gray.800"
         />
         
         <Text color="crimson" fontSize="xs" mx="3">

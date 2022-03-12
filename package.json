@@ -2,6 +2,7 @@
   "name": "formik-form",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://69kazu69.github.io/formik-form",
   "dependencies": {
     "@chakra-ui/icons": "^1.1.5",
     "@chakra-ui/react": "^1.8.3",
@@ -41,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
   }
 }

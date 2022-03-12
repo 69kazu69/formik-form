@@ -26,7 +26,7 @@ const SignUp = () => {
                             .min(6, "Too Short!")
                             .required("Cannot be Empty!")
     })
-  return <Flex direction = "column" justify="center" align="center" h="100vh">
+  return <Flex direction = "column" justify="center" align="center" h="100vh" bg="gray.800"w="100vw" >
       <Formik
       
         initialValues={{
@@ -38,7 +38,7 @@ const SignUp = () => {
         validationSchema={ validate }
 
         onSubmit={(values) =>{
-        console.log(values)
+        
     
         setShowtick(true)
     
@@ -50,7 +50,7 @@ const SignUp = () => {
           {
               !showtick ? (
                 formik => (
-                    <MFlex direction="column" align="center" justify="center" bg="gray.900" w="400px" h="50vh" boxShadow='dark-lg' p='6' 
+                    <MFlex direction="column" align="center" justify="center" bg="gray.900" w="400px" h="50vh" boxShadow='dark-lg' p='6' borderRadius="5px"
                     
                     initial = {{
                         scale : 0,
@@ -67,10 +67,10 @@ const SignUp = () => {
                     }}
                     
                     >
-                        <Heading fontSize = "4xl"  my="10" >
+                        <Heading fontSize = "4xl"  my="10" color ="gray.100">
                             Sign Up
                         </Heading>
-                        <Form>
+                        <Form >
                         <TextField label= "Name" type = "text" name = "Name" />
                         <TextField label= "E-mail" type = "email" name = "Email" />
                         <TextField label= "Password" type = "password" name = "password" />
